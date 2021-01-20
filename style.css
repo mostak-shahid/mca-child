@@ -1,0 +1,434 @@
+/**
+Theme Name: MCA Child
+Author: Md. Mostak Shahid
+Author URI: https://www.mdmostakshahid.me/
+Description: Child theme for Astra.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+.entry-content .has-huge-font-size {
+    font-size: 2.625em;
+}
+
+.main-header-menu .menu-item > .menu-link {
+    color: #0b213d;
+    font-weight: 600;
+}
+
+.contact_details {
+    color: #bbb;
+    margin: 0;
+    font-size: 14px;
+}
+
+.main-top-bar-container ul,.bottom-social ul {
+    list-style: none;
+    margin: 0;
+}
+
+.main-top-bar-container ul li,
+.bottom-social ul li,
+footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main-top-bar-container .top-social ul li a {
+    color: #bbbbbb;
+}
+
+.main-top-bar-container .top-social ul li a:hover {
+    color: #ffffff;
+}
+
+.main-header-bar .main-top-bar-container {
+    line-height: 1.2;
+    padding: 10px 0;
+}
+
+.mos-sticky-header {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #ffffff;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.mos-sticky-header.tiny {
+    top: 0;
+}
+
+.main-top-bar-container,
+.mos-sticky-header .main-header-container {
+    justify-content: space-between;
+}
+
+.hidden-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0
+}
+
+.full-height {
+    min-height: 100vh;
+}
+.height-1100{
+    height: 1100px;
+}
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.w-100,
+.w-button-100 a {
+    width: 100%;
+}
+.center-button{display: block!important;text-align: center;}
+
+.text-center {
+    text-align: center
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-light-blue {
+    color: #01bae1 !important;
+}
+
+.text-deep-blue {
+    color: #1d3067 !important;
+}
+
+.text-orange {
+    color: #ff8d39 !important;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-responsive-32by9::before {
+    padding-top: 28.125%;
+}
+
+.embed-responsive-21by9::before {
+    padding-top: 42.857143%;
+}
+
+.embed-responsive-16by9::before {
+    padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+    padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+    padding-top: 100%;
+}
+
+#home-banner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    min-height: unset;
+    width: 100%;
+    z-index: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,7db9e8+0,f3f9fd+100&0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(243, 249, 253, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(243, 249, 253, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(243, 249, 253, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007db9e8', endColorstr='#f3f9fd', GradientType=0);
+    /* IE6-9 */
+
+}
+
+#home-banner h1 {
+    font-size: 72px;
+    font-weight: 300;
+}
+
+#home-banner h1 strong {
+    color: rgb(0, 186, 225);
+    font-size: 120%;
+}
+
+.entry-content {
+    margin-bottom: 50px;
+}
+
+.page-home article .entry-content,
+.page-mca-aged-leads article .entry-content,
+.page-mca-live-transfer-leads .entry-content,
+.page-contact .entry-content {
+    margin-bottom: 0;
+}
+
+.entry-header h1 {
+    text-align: center;
+    padding: 180px 0 90px;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+#pricing-section .wp-block-columns {
+    margin-bottom: 0;
+}
+
+li.wc_payment_method.payment_method_stripe img {
+    width: 16.6666667%;
+}
+
+li.wc_payment_method.payment_method_stripe img:first-child {
+    clear: left;
+}
+
+.mos-post-grid,.blog.post-archive .ast-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    width: 100%
+}
+
+.mos-post-grid.gap-sm {
+    grid-gap: 10px
+}
+
+.mos-post-grid.gap-md,.blog.post-archive .ast-row {
+    grid-gap: 20px
+}
+
+.mos-post-grid.gap-lg {
+    grid-gap: 30px
+}
+.blog.post-archive .entry-title {
+    font-size: 28px;
+}
+.single.post-archive .entry-header h1 {
+    padding-bottom: 10px;
+}
+.single.post-archive .entry-header .entry-meta {
+    text-align: center;
+    padding-bottom: 80px;
+}
+.mos-post-grid-unit {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: relative;
+    color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mos-post-grid-unit .wrapper {
+    position: relative;
+    padding-top: 30%;
+}
+
+.mos-post-grid-unit:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,333333+100&0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#333333', GradientType=0);
+    /* IE6-9 */
+}
+
+.mos-post-grid-one,
+.mos-post-grid-two,
+.mos-post-grid-three,
+.mos-post-grid-four,
+.mos-post-grid-five,
+.mos-post-grid-six,
+.mos-post-grid-seven,
+.mos-post-grid-eight,
+.mos-post-grid-nine,
+.mos-post-grid-ten,
+.mos-post-grid-eleven,
+.mos-post-grid-twelve,
+.blog.post-archive .ast-row article{
+    grid-column-end: span 12;
+}
+
+.nested {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.mos-post-grid-merge-two-rows {
+    grid-row-end: span 2
+}
+
+.mos-post-grid-merge-three-rows {
+    grid-row-end: span 3
+}
+
+.mos-post-grid-merge-four-rows {
+    grid-row-end: span 4
+}
+
+.mos-post-grid-merge-five-rows {
+    grid-row-end: span 5
+}
+
+.mos-post-grid-merge-six-rows {
+    grid-row-end: span 6
+}
+.blog.post-archive .ast-row:before{
+    display: none;
+}
+.ast-separate-container .ast-article-post,
+.ast-separate-container .ast-article-single {
+    padding: 0;
+}
+footer .ast-flex{
+    align-items: center;
+}
+footer .ast-footer-overlay {
+    background-image: url(images/home_loans2_footerbg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width:576px) {
+    .mos-post-grid-one {
+        grid-column-end: span 1
+    }
+
+    .mos-post-grid-two {
+        grid-column-end: span 2
+    }
+
+    .mos-post-grid-three {
+        grid-column-end: span 3
+    }
+
+    .mos-post-grid-four,
+    .blog.post-archive .ast-row article {
+        grid-column-end: span 4
+    }
+
+    .mos-post-grid-five {
+        grid-column-end: span 5
+    }
+
+    .mos-post-grid-six {
+        grid-column-end: span 6
+    }
+
+    .mos-post-grid-seven {
+        grid-column-end: span 7
+    }
+
+    .mos-post-grid-eight {
+        grid-column-end: span 8
+    }
+
+    .mos-post-grid-nine {
+        grid-column-end: span 9
+    }
+
+    .mos-post-grid-ten {
+        grid-column-end: span 10
+    }
+
+    .mos-post-grid-eleven {
+        grid-column-end: span 11
+    }
+}
