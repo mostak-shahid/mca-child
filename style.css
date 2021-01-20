@@ -50,7 +50,7 @@ footer ul li {
 
 .main-header-bar .main-top-bar-container {
     line-height: 1.2;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .mos-sticky-header {
@@ -74,7 +74,8 @@ footer ul li {
 .mos-sticky-header .main-header-container {
     justify-content: space-between;
 }
-
+.main-header-bar-wrap .ast-site-identity {padding: 15px 0;}
+.main-header-bar-wrap .custom-logo-link {display: block;line-height: 60px;}
 .hidden-link {
     position: absolute;
     top: 0;
@@ -87,8 +88,8 @@ footer ul li {
 .full-height {
     min-height: 100vh;
 }
-.height-1100{
-    height: 1100px;
+.height-1050{
+    height: 1050px;
 }
 .mb-0 {
     margin-bottom: 0px !important;
