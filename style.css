@@ -16,6 +16,9 @@ html {
 .entry-content .has-huge-font-size {
     font-size: 2.625em;
 }
+.entry-content .has-normal-font-size {
+    font-size: 1em;
+}
 
 .main-header-menu .menu-item > .menu-link {
     color: #0b213d;
