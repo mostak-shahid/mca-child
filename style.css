@@ -377,6 +377,11 @@ li.wc_payment_method.payment_method_stripe img:first-child {
 .ast-separate-container .ast-article-single {
     padding: 0;
 }
+.woocommerce-page.columns-4 ul.products li.product, 
+.woocommerce.columns-4 ul.products li.product {
+    border: 1px solid #eaeaea;
+    padding-bottom: 20px;
+}
 footer .ast-flex{
     align-items: center;
 }
