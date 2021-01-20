@@ -24,6 +24,12 @@ function child_enqueue_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+require_once('theme-init/plugin-update-checker.php');
+$themeInit = Puc_v4_Factory::buildUpdateChecker(
+	'https://raw.githubusercontent.com/mostak-shahid/update/master/mca-child.json',
+	__FILE__,
+	'mca-child'
+);
 require_once('shortcodes.php');
 require_once('hooks.php');
 require_once('woo.php');
