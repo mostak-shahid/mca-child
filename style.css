@@ -3,7 +3,7 @@ Theme Name: MCA Child
 Author: Md. Mostak Shahid
 Author URI: https://www.mdmostakshahid.me/
 Description: Child theme for Astra.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
@@ -263,7 +263,7 @@ li.wc_payment_method.payment_method_stripe img:first-child {
     clear: left;
 }
 
-.mos-post-grid,.blog.post-archive .ast-row {
+.mos-post-grid,.blog.post-archive .ast-row ,.archive.post-archive .ast-row{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: 0 auto;
@@ -274,7 +274,7 @@ li.wc_payment_method.payment_method_stripe img:first-child {
     grid-gap: 10px
 }
 
-.mos-post-grid.gap-md,.blog.post-archive .ast-row {
+.mos-post-grid.gap-md,.blog.post-archive .ast-row ,.archive.post-archive .ast-row {
     grid-gap: 20px
 }
 
@@ -341,7 +341,8 @@ li.wc_payment_method.payment_method_stripe img:first-child {
 .mos-post-grid-ten,
 .mos-post-grid-eleven,
 .mos-post-grid-twelve,
-.blog.post-archive .ast-row article{
+.blog.post-archive .ast-row article,
+.archive.post-archive .ast-row article{
     grid-column-end: span 12;
 }
 
@@ -370,7 +371,7 @@ li.wc_payment_method.payment_method_stripe img:first-child {
 .mos-post-grid-merge-six-rows {
     grid-row-end: span 6
 }
-.blog.post-archive .ast-row:before{
+.blog.post-archive .ast-row:before,.archive.post-archive .ast-row:before{
     display: none;
 }
 .ast-separate-container .ast-article-post,
@@ -410,7 +411,8 @@ footer .ast-footer-overlay {
     }
 
     .mos-post-grid-four,
-    .blog.post-archive .ast-row article {
+    .blog.post-archive .ast-row article,
+    .archive.post-archive .ast-row article {
         grid-column-end: span 4
     }
 

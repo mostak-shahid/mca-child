@@ -16,7 +16,6 @@ function custom_sticky_header(){
     <div class="main-header-bar-wrap mos-sticky-header">
         <div <?php echo astra_attr( 'main-header-bar' ); ?>>
             <div class="ast-container">
-
                 <div class="ast-flex main-header-container">
                     <?php astra_masthead_content(); ?>
                 </div><!-- Main Header Container -->
