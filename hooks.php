@@ -73,3 +73,62 @@ function update_featured_images_size_callback( $size ) {
     if(!is_single()) $size = array( 387, 387 ); // Update the 500(Width), 500(Height) as per your requirment.
 	return $size;
 }
+
+add_action( 'astra_template_parts_content', 'mos_author_details_func', 14 );
+function mos_author_details_func(){
+    if(is_single() && get_post_type()=='post') :
+    ?>
+    <div class="mos-post-autor-details">
+        <div class="img-part"><?php echo get_avatar(get_the_author_meta('ID'),120) ?></div>
+        <div class="text-part">
+            <h4 class="author-name" itemprop="name"><a href="<?php echo get_the_author_meta('user_url') ?>" title="View all posts by <?php echo get_the_author_meta('display_name') ?>" rel="author" class="url fn n" itemprop="url"><?php echo get_the_author_meta('display_name') ?></a></h4>
+            <div class="author-description" itemprop="name"><?php echo get_the_author_meta('description') ?></div>
+        </div>
+    </div>
+    <?php
+    endif;
+}
+add_action('astra_primary_content_bottom','mos_related_posts_func');
+function mos_related_posts_func(){
+    if(is_single() && get_post_type()=='post'):
+        $term_ids = [];
+        $categories = get_the_category(get_the_ID());
+        foreach($categories as $category){
+            $term_ids[] = $category->term_id;
+        }
+        //var_dump(implode(',',$term_ids));
+        $args = array(
+            'posts_per_page' => 6,
+            'cat' => implode(',',$term_ids),
+            'post__not_in' => array(get_the_ID())
+        );
+        // The Query
+        $the_query = new WP_Query( $args );
+
+        // The Loop
+        if ( $the_query->have_posts() ) : ?>
+        <div class="related-post">
+            <h2 class="section-title"><?php echo __('Related Posts') ?></h2>
+            
+            <div class="related-post-wrapper">
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                    <div class="post-content">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="ast-blog-featured-section post-thumb">
+                                <div class="post-thumb-img-content post-thumb"><a href="<?php echo get_the_permalink() ?>"><img width="373" height="210" src="<?php echo aq_resize(get_the_post_thumbnail_url('','full'), 384, 210, true) ?>" class="attachment-373x250 size-373x250 wp-post-image" alt="office cleaning safety tips - janitorial leads pro" loading="lazy" itemprop="image"></a></div>
+                            </div>
+                        <?php endif;?>
+                        <div class="related-entry-header">
+                            <h4 class="related-entry-title" itemprop="headline"><a href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php echo get_the_title() ?></a></h4>
+                        </div>
+                    </div>       
+               
+                <?php endwhile; ?>
+            </div>
+        </div>
+        <?php endif;
+        /* Restore original Post Data */
+        wp_reset_postdata();        
+    endif;
+}
