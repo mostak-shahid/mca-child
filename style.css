@@ -3,7 +3,7 @@ Theme Name: MCA Child
 Author: Md. Mostak Shahid
 Author URI: https://www.mdmostakshahid.me/
 Description: Child theme for Astra.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
@@ -12,7 +12,25 @@ Template: astra
 html {
     scroll-behavior: smooth;
 }
-
+.ast-separate-container #primary {
+    margin-top: 0!important;
+}
+.ast-separate-container .ast-archive-description, 
+.ast-separate-container .ast-author-box {
+    background-color: transparent;
+}
+.ast-separate-container .ast-archive-description, 
+.ast-separate-container .ast-author-box {
+    padding: 0;
+}
+.ast-archive-description .ast-archive-title {
+    color: #1d3067;
+    font-size: 28px;
+    font-weight: 400;
+}
+.ast-archive-description .ast-author-avatar{
+    display: none;
+}
 .entry-content .has-huge-font-size {
     font-size: 40px;
 }
@@ -244,7 +262,8 @@ footer ul li {
     margin-bottom: 0;
 }
 
-.entry-header h1 {
+.entry-header h1,
+.ast-archive-description .ast-archive-title {
     text-align: center;
     padding: 180px 0 90px;
     font-size: 40px;
