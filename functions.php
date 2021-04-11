@@ -34,3 +34,4 @@ require_once('shortcodes.php');
 require_once('hooks.php');
 require_once('woo.php');
 require_once('aq_resizer.php');
+require_once('carbon-fields.php');
