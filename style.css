@@ -135,7 +135,9 @@ footer ul li {
 .mb-30 {
     margin-bottom: 30px !important;
 }
-
+.p-30{
+    padding: 30px;
+}
 .w-100,
 .w-button-100 a {
     width: 100%;
