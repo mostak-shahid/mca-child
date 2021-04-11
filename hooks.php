@@ -132,3 +132,27 @@ function mos_related_posts_func(){
         wp_reset_postdata();        
     endif;
 }
+add_action('astra_content_top', 'custom_page_title');
+function custom_page_title () {
+    if (!is_home() && !is_page() && !is_single()) : 
+    ?>
+        <header class="entry-header ast-no-thumbnail ast-no-meta">
+            <h1 class="entry-title" itemprop="headline">
+                <?php if (is_author()) : ?>
+                Author Archive: <?php echo get_the_author()?>
+                <?php elseif (is_category()) : ?>
+                Category Archive: <?php single_cat_title(); ?>
+                <?php elseif (is_tag()) : ?>
+                Tag Archive: <?php single_tag_title(); ?>
+                <?php elseif (is_search()) : ?>
+                Search Result for <?php echo get_search_query(); ?>
+                <?php elseif (is_404()) : ?>
+                404 Page
+                <?php else : ?>
+                Archive Page
+                <?php endif;?>
+            </h1>
+        </header>
+    <?php 
+    endif;
+}
