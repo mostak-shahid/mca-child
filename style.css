@@ -351,7 +351,7 @@ body.archive .ast-archive-description, body.search .ast-archive-description, bod
     line-height: 40px;
 }
 
-#pricing-section .wp-block-columns {
+#pricing .wp-block-columns {
     margin-bottom: 0;
 }
 
