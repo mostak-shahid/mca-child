@@ -74,7 +74,7 @@ function update_featured_images_size_callback( $size ) {
 	return $size;
 }
 
-add_action( 'astra_template_parts_content', 'mos_author_details_func', 14 );
+//add_action( 'astra_template_parts_content', 'mos_author_details_func', 14 );
 function mos_author_details_func(){
     if(is_single() && get_post_type()=='post') :
     ?>
@@ -155,4 +155,8 @@ function custom_page_title () {
         </header>
     <?php 
     endif;
+}
+add_action('wp_head', 'add_mos_additional_coding', 999);
+function add_mos_additional_coding(){
+    echo carbon_get_theme_option( 'mos_additional_coding' );
 }
